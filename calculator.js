@@ -22,14 +22,14 @@ function multiply(num1, num2) {
 
 function power(num1, num2) {
 
-  return num1 ** num2;
+  return Math.pow(num1, num2);
 }
 
 // MAYBE?? SQRT
 
 function squareRoot(num1) {
 
-  return Math.sqrt(num1 ** 0.05);
+  return Math.sqrt(num1);
 }
 
 // FOUND INTERESTING ANSWER FOR PERCENTAGE ON WEB... WILL IT WORK?
@@ -46,14 +46,32 @@ function percentage (num1, num2) {
 function calculate(expression) {
 
   const tokens = expression.split(" ");
-  const num1;
-  // const num1 = tokens[0];
-  const operator;
+  // const num1 = tokens[0]; ------ this syntax was messin up the system with the sqrt so they must be changed 
   // const operator = tokens[1];
-  const num2;
   // const num2 = Number(tokens[2]);
 
+  if (tokens.length === 3 ) {
+    num1 = Number(tokens[0]);
+    operator = tokens[1];
+    num2 = Number(tokens[2]);
 
+    //number is invalid
+    if (Number.isNaN(num1) || Number.isNaN(num2)) {
+      alert("This was not a number");
+      return;
+    }
+  }
+
+  // ?????? WHY IS THIS ONE AN ELSE IF ??????
+  else if (tokens.length === 2) {
+    operator = (tokens[0]);
+    num1 = Number(tokens[1]);
+
+    if (Number.isNaN(num1)) {
+      alert("This was not a number");
+      return;
+    }
+  }
 
   if (operator === "+") {
 
@@ -82,18 +100,13 @@ function calculate(expression) {
     return percentage(num1,num2);
   }
 
-  // THIS STATEMENT DID NOT WORK BECAUSE IT IS AT THE 0 INDEX. MAKE A FUNCTION TO MAKE THIS RUN PROPERLY
+  // THIS STATEMENT DID NOT WORK BECAUSE IT IS AT THE 0 INDEX. MAKE An else if statement TO MAKE THIS RUN PROPERLY
+  // I ended up needing to put the solution into an else if statement in order to 
 
   if (operator === "sqrt") {
-    return Math.sqrt(num1);
+    return squareRoot(num1);
   }
 
-  // If a number is invalid or at least not a number
-
-  if (Number.isNam(num1) || Number.isNaN(num2)) {
-    alert("This was not a number");
-
-  }
   
 }
 
