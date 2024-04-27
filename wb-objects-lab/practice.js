@@ -53,7 +53,7 @@ favoriteThings["car"] = "ford";
 
 favoriteThings.brand = "eminenceOrganics";
 
-console.log(favoriteThings);
+// console.log(favoriteThings);
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
@@ -118,6 +118,20 @@ function addToCart(item, quantity) {
 
 //Code Here
 
+function greaterThan10(obj) {
+  // for in loop through key value pairs
+    for (const key in obj) {
+      // if statement to see if value is greater than 10. using typeof to return data type
+      if (typeof obj[key] === "number" && obj[key] > 10) {
+        // updating value using if statement and bracket notation
+        obj[key] = 0;
+      }
+    }
+
+    // return the modified object
+    return obj;
+  }
+
 /// ////////////// PROBLEM 6 ///////////////////
 
 /*
@@ -127,6 +141,23 @@ function addToCart(item, quantity) {
 */
 
 //Code Here
+
+function double(obj) {
+
+  // for in loop through objects key:value pairs
+  for (const keys in obj) {
+  // using typeof to check key:value pairs to see if value is a "number"
+    if (typeof obj[keys] === "number") {
+  // update the value of your pair by multiplying 2
+      obj[keys] *= 2;
+
+    }
+    console.log (obj[keys]);
+
+  }
+  // returning the modified value for object
+  return obj;
+}
 
 /// ////////////// PROBLEM 7 ///////////////////
 
