@@ -18,7 +18,7 @@ const me = {
   age: 23,
 
 };
-console.log(me.name, me.age);
+// console.log(me.name, me.age);
 alert(`${me.name}, ${me.age}`);
 
 
@@ -34,21 +34,26 @@ alert(`${me.name}, ${me.age}`);
 
 const favoriteThings = {
   band: "currentlyTimberTimbre",
-  food: "bLT's",
+  food: "Chicken Nuggets",
   person: "michaelSayer",
-  book: "cobaltByKristinBaker",
+  book: "Harry Potter",
   movie: "theImaginariumOfDoctorParnassus",
   holiday: "halloween",
 };
 
-console.log(favoriteThings);
 
 /*
-  After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car
-  and then another key named 'brand' with the value being your favorite brand.
+After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car
+and then another key named 'brand' with the value being your favorite brand.
 */
 
 //Code here
+
+favoriteThings["car"] = "ford";
+
+favoriteThings.brand = "eminenceOrganics";
+
+console.log(favoriteThings);
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
@@ -78,6 +83,9 @@ const user2 = {
 
 //Code Here
 
+user2.name = "Bryan G. Smith";
+user2.email = "bryan.smith@devmounta.in";
+
 /// ////////////// PROBLEM 4 ///////////////////
 
 let shoppingCart = {};
@@ -88,6 +96,17 @@ let shoppingCart = {};
 */
 
 //Code Here
+
+function addToCart(item, quantity) {
+
+  if (shoppingCart[item]) {
+    // if the function does update quantity
+    shoppingCart[item] += quantity; 
+  } else {
+    // if the function doesn't add our key:value pair
+    shoppingCart[item] = quantity;
+  }
+}
 
 /// ////////////// PROBLEM 5 ///////////////////
 
