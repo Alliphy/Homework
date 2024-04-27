@@ -17,9 +17,9 @@ const me = {
   name: "Eva",
   age: 23,
 
-}
+};
 console.log(me.name, me.age);
-alert(`${$me.name}, ${me.age}`);
+alert(`${me.name}, ${me.age}`);
 
 
 
@@ -33,11 +33,15 @@ alert(`${$me.name}, ${me.age}`);
 //Code here
 
 const favoriteThings = {
-  band: "currentlyBrockHampton",
+  band: "currentlyTimberTimbre",
   food: "bLT's",
   person: "michaelSayer",
   book: "cobaltByKristinBaker",
-}
+  movie: "theImaginariumOfDoctorParnassus",
+  holiday: "halloween",
+};
+
+console.log(favoriteThings);
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car
